@@ -2,41 +2,64 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Polygon Platform Design System - Professional Enterprise Tech Aesthetic */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
-
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
-
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
-
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
-
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
-
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
-
-    --radius: 0.5rem;
+    /* Core Brand Colors */
+    --background: 220 26% 4%;
+    --foreground: 210 12% 96%;
+    
+    /* Surface Colors */
+    --card: 220 20% 8%;
+    --card-foreground: 210 12% 94%;
+    
+    --popover: 220 20% 8%;
+    --popover-foreground: 210 12% 94%;
+    
+    /* Brand Identity */
+    --primary: 220 100% 60%;
+    --primary-foreground: 220 26% 4%;
+    --primary-glow: 220 100% 70%;
+    
+    --secondary: 220 20% 12%;
+    --secondary-foreground: 210 12% 94%;
+    
+    --muted: 220 15% 10%;
+    --muted-foreground: 215 10% 65%;
+    
+    --accent: 45 100% 55%;
+    --accent-foreground: 220 26% 4%;
+    
+    --destructive: 0 75% 55%;
+    --destructive-foreground: 210 12% 96%;
+    
+    /* Interface Elements */
+    --border: 220 15% 15%;
+    --input: 220 15% 12%;
+    --ring: 220 100% 60%;
+    
+    --radius: 0.75rem;
+    
+    /* Enterprise Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
+    --gradient-hero: linear-gradient(135deg, hsl(220 26% 4%) 0%, hsl(220 20% 8%) 100%);
+    --gradient-mesh: radial-gradient(circle at 50% 50%, hsl(var(--primary) / 0.1) 0%, transparent 70%);
+    
+    /* Network Theme */
+    --network-node: 220 100% 60%;
+    --network-connection: 220 80% 50%;
+    --security-alert: 0 75% 55%;
+    --telecom-signal: 120 60% 50%;
+    
+    /* Shadows & Effects */
+    --shadow-enterprise: 0 25px 50px -12px hsl(220 26% 4% / 0.6);
+    --shadow-glow: 0 0 40px hsl(var(--primary) / 0.3);
+    --shadow-network: 0 0 20px hsl(var(--primary) / 0.2);
+    
+    /* Animation Timing */
+    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-network: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 
     --sidebar-background: 0 0% 98%;
 
@@ -100,6 +123,82 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans antialiased;
+    background-image: var(--gradient-mesh);
+  }
+}
+
+@layer components {
+  /* Hero Section Styles */
+  .hero-gradient {
+    background: var(--gradient-hero);
+  }
+  
+  .network-glow {
+    box-shadow: var(--shadow-network);
+  }
+  
+  .enterprise-shadow {
+    box-shadow: var(--shadow-enterprise);
+  }
+  
+  /* Network Animation Effects */
+  .pulse-network {
+    animation: pulse-network 3s ease-in-out infinite;
+  }
+  
+  .network-grid {
+    background-image: 
+      linear-gradient(hsl(var(--border)) 1px, transparent 1px),
+      linear-gradient(90deg, hsl(var(--border)) 1px, transparent 1px);
+    background-size: 50px 50px;
+    opacity: 0.3;
+  }
+  
+  .floating {
+    animation: floating 6s ease-in-out infinite;
+  }
+  
+  /* Custom Scrollbar */
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: hsl(var(--muted));
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: hsl(var(--primary));
+    border-radius: 4px;
+  }
+}
+
+@layer utilities {
+  .text-gradient-primary {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
+
+@keyframes pulse-network {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 0.8;
+  }
+}
+
+@keyframes floating {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
   }
 }

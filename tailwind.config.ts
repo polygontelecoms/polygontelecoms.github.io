@@ -26,7 +26,8 @@ export default {
 				foreground: 'hsl(var(--foreground))',
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',
-					foreground: 'hsl(var(--primary-foreground))'
+					foreground: 'hsl(var(--primary-foreground))',
+					glow: 'hsl(var(--primary-glow))'
 				},
 				secondary: {
 					DEFAULT: 'hsl(var(--secondary))',
@@ -51,6 +52,13 @@ export default {
 				card: {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
+				},
+				// Enterprise Theme Colors
+				network: {
+					node: 'hsl(var(--network-node))',
+					connection: 'hsl(var(--network-connection))',
+					alert: 'hsl(var(--security-alert))',
+					signal: 'hsl(var(--telecom-signal))'
 				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
