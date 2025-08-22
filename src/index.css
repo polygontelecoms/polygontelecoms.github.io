@@ -6,38 +6,38 @@
 
 @layer base {
   :root {
-    /* Core Brand Colors */
-    --background: 220 26% 4%;
-    --foreground: 210 12% 96%;
+    /* Core Navy Brand Colors */
+    --background: 220 30% 8%;
+    --foreground: 210 15% 98%;
     
     /* Surface Colors */
-    --card: 220 20% 8%;
-    --card-foreground: 210 12% 94%;
+    --card: 220 25% 12%;
+    --card-foreground: 210 12% 96%;
     
-    --popover: 220 20% 8%;
-    --popover-foreground: 210 12% 94%;
+    --popover: 220 25% 12%;
+    --popover-foreground: 210 12% 96%;
     
-    /* Brand Identity */
-    --primary: 220 100% 60%;
-    --primary-foreground: 220 26% 4%;
-    --primary-glow: 220 100% 70%;
+    /* Navy Brand Identity */
+    --primary: 220 85% 50%;
+    --primary-foreground: 220 30% 8%;
+    --primary-glow: 220 85% 60%;
     
-    --secondary: 220 20% 12%;
-    --secondary-foreground: 210 12% 94%;
+    --secondary: 220 25% 18%;
+    --secondary-foreground: 210 12% 96%;
     
-    --muted: 220 15% 10%;
-    --muted-foreground: 215 10% 65%;
+    --muted: 220 20% 14%;
+    --muted-foreground: 215 15% 70%;
     
-    --accent: 45 100% 55%;
-    --accent-foreground: 220 26% 4%;
+    --accent: 45 95% 60%;
+    --accent-foreground: 220 30% 8%;
     
     --destructive: 0 75% 55%;
     --destructive-foreground: 210 12% 96%;
     
     /* Interface Elements */
-    --border: 220 15% 15%;
-    --input: 220 15% 12%;
-    --ring: 220 100% 60%;
+    --border: 220 20% 20%;
+    --input: 220 25% 16%;
+    --ring: 220 85% 50%;
     
     --radius: 0.75rem;
     

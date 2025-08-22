@@ -5,41 +5,36 @@ const Header = () => {
   return (
     <header className="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-md border-b border-border">
       <div className="container mx-auto px-6 h-16 flex items-center justify-between">
-        <div className="flex items-center space-x-3">
-          <div className="relative">
-            <Shield className="h-8 w-8 text-primary" />
-            <Network className="h-4 w-4 text-accent absolute -top-1 -right-1" />
+        <div className="flex items-center space-x-2">
+          <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
+            <span className="text-primary-foreground font-bold text-sm">PT</span>
           </div>
-          <div>
-            <h1 className="text-xl font-bold text-foreground">Polygon</h1>
-            <p className="text-xs text-muted-foreground -mt-1">Platform</p>
-          </div>
+          <span className="font-bold text-xl">Polygon Telecoms</span>
         </div>
         
+        {/* Navigation */}
         <nav className="hidden md:flex items-center space-x-8">
-          <a href="#platform" className="text-foreground hover:text-primary transition-colors">
-            Platform
+          <a href="#marketplace" className="text-muted-foreground hover:text-primary transition-colors">
+            Marketplace
           </a>
-          <a href="#security" className="text-foreground hover:text-primary transition-colors">
-            Security
+          <a href="#homes" className="text-muted-foreground hover:text-primary transition-colors">
+            Homes
           </a>
-          <a href="#telecoms" className="text-foreground hover:text-primary transition-colors">
-            Telecoms
+          <a href="#business" className="text-muted-foreground hover:text-primary transition-colors">
+            Business
           </a>
-          <a href="#pricing" className="text-foreground hover:text-primary transition-colors">
+          <a href="#pricing" className="text-muted-foreground hover:text-primary transition-colors">
             Pricing
           </a>
         </nav>
         
+        {/* CTA Buttons */}
         <div className="flex items-center space-x-4">
-          <Button variant="enterprise" className="hidden sm:flex">
-            Request Demo
+          <Button variant="ghost" className="hidden sm:inline-flex">
+            Sign In
           </Button>
           <Button variant="hero">
-            Get Started
-          </Button>
-          <Button variant="ghost" size="icon" className="md:hidden">
-            <Menu className="h-5 w-5" />
+            Purchase
           </Button>
         </div>
       </div>

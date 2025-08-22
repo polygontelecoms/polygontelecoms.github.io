@@ -1,6 +1,6 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
-import PlatformOverview from "@/components/PlatformOverview";
+import StakeholderSections from "@/components/StakeholderSections";
 import Features from "@/components/Features";
 import Pricing from "@/components/Pricing";
 import Footer from "@/components/Footer";
@@ -11,7 +11,7 @@ const Index = () => {
       <Header />
       <main>
         <Hero />
-        <PlatformOverview />
+        <StakeholderSections />
         <Features />
         <Pricing />
       </main>
