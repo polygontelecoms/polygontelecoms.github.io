@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Shield, Network, Menu } from "lucide-react";
+import ThemeToggle from "./ThemeToggle";
 
 const Header = () => {
   return (
@@ -30,6 +31,7 @@ const Header = () => {
         
         {/* CTA Buttons */}
         <div className="flex items-center space-x-4">
+          <ThemeToggle />
           <Button variant="ghost" className="hidden sm:inline-flex">
             Sign In
           </Button>
