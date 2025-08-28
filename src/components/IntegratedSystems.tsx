@@ -5,15 +5,11 @@ import { Wifi, Shield, Plane, Radio, Building, Users, ArrowRight } from "lucide-
 import sentryTurretImage from "@/assets/sentry-turret.jpg";
 import telecomTowerImage from "@/assets/telecom-tower.jpg";
 import networkVisualizationImage from "@/assets/network-visualization.jpg";
-
 const IntegratedSystems = () => {
-  return (
-    <section className="py-24 bg-muted/30">
+  return <section className="py-24 bg-muted/30">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            One Network, Two Revolutions
-          </h2>
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">One Network, Two Services</h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Polygon's core innovation is its synergistic infrastructure. The same hardware that provides 
             AI-driven security also powers a city-wide, on-demand telecommunications network.
@@ -30,11 +26,7 @@ const IntegratedSystems = () => {
           <TabsContent value="overview" className="space-y-12">
             <div className="grid md:grid-cols-2 gap-8 items-center">
               <div>
-                <img 
-                  src={networkVisualizationImage} 
-                  alt="Integrated Polygon network infrastructure visualization" 
-                  className="w-full rounded-lg shadow-lg"
-                />
+                <img src={networkVisualizationImage} alt="Integrated Polygon network infrastructure visualization" className="w-full rounded-lg shadow-lg" />
               </div>
               <div className="space-y-6">
                 <h3 className="text-3xl font-bold">The Polygon Network Viz</h3>
@@ -95,11 +87,7 @@ const IntegratedSystems = () => {
                 </div>
               </div>
               <div>
-                <img 
-                  src={telecomTowerImage} 
-                  alt="Polygon telecommunications tower with integrated systems" 
-                  className="w-full rounded-lg shadow-lg"
-                />
+                <img src={telecomTowerImage} alt="Polygon telecommunications tower with integrated systems" className="w-full rounded-lg shadow-lg" />
               </div>
             </div>
           </TabsContent>
@@ -107,11 +95,7 @@ const IntegratedSystems = () => {
           <TabsContent value="security" className="space-y-12">
             <div className="grid md:grid-cols-2 gap-8 items-center">
               <div>
-                <img 
-                  src={sentryTurretImage} 
-                  alt="AI-powered sentry turret with integrated charging and network capabilities" 
-                  className="w-full rounded-lg shadow-lg"
-                />
+                <img src={sentryTurretImage} alt="AI-powered sentry turret with integrated charging and network capabilities" className="w-full rounded-lg shadow-lg" />
               </div>
               <div className="space-y-6">
                 <div className="flex items-center space-x-3 mb-4">
@@ -188,8 +172,6 @@ const IntegratedSystems = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default IntegratedSystems;
