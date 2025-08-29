@@ -1,9 +1,17 @@
 import { Button } from "@/components/ui/button";
-import { Shield, Network, Menu } from "lucide-react";
+import { Shield, Network, Menu, Globe } from "lucide-react";
 import ThemeToggle from "./ThemeToggle";
+import { useState } from "react";
+import NetworkVisualizer from "./NetworkVisualizer";
 
 const Header = () => {
+  const [showNetworkVisualizer, setShowNetworkVisualizer] = useState(false);
+
   return (
+    <>
+      {showNetworkVisualizer && (
+        <NetworkVisualizer onClose={() => setShowNetworkVisualizer(false)} />
+      )}
     <header className="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-md border-b border-border">
       <div className="container mx-auto px-6 h-16 flex items-center justify-between">
         <div className="flex items-center space-x-2">
@@ -32,6 +40,15 @@ const Header = () => {
         {/* CTA Buttons */}
         <div className="flex items-center space-x-4">
           <ThemeToggle />
+          <Button 
+            variant="ghost" 
+            size="sm"
+            onClick={() => setShowNetworkVisualizer(true)}
+            className="hidden sm:inline-flex"
+          >
+            <Globe className="w-4 h-4 mr-2" />
+            Network
+          </Button>
           <Button variant="ghost" className="hidden sm:inline-flex">
             Sign In
           </Button>
@@ -41,6 +58,7 @@ const Header = () => {
         </div>
       </div>
     </header>
+    </>
   );
 };
 
