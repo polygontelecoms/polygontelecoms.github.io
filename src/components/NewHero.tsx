@@ -25,6 +25,9 @@ const NewHero = () => {
             <span className="text-foreground">Connect the World.</span>
           </h1>
           
+          {/* Section Title */}
+          <h2 className="text-2xl md:text-3xl font-bold mb-4">One Network, Two Services</h2>
+          
           {/* Core Value Proposition */}
           <p className="text-sm sm:text-base md:text-lg lg:text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
             The same network that connects us is the same network that protects us. 
