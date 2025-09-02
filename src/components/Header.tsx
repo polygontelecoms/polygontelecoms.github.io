@@ -35,7 +35,7 @@ const Header = () => {
           <Button 
             variant="ghost" 
             size="sm"
-            onClick={() => window.open('https://polygontelecoms.github.io/Drone-Network-visualizer.github.io/', '_blank')}
+            onClick={() => window.location.href = 'https://polygontelecoms.github.io/Drone-Network-visualizer.github.io/'}
             className="hidden sm:inline-flex"
           >
             <Globe className="w-4 h-4 mr-2" />
