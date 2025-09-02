@@ -5,7 +5,7 @@ import droneFleetImage from "@/assets/drone-fleet.jpg";
 
 const NewHero = () => {
   return (
-    <section className="relative min-h-screen w-full flex items-center justify-center overflow-hidden bg-background">
+    <section className="relative min-h-screen w-full flex items-center justify-center overflow-hidden bg-background pt-16">
       {/* Background Image */}
       <div className="absolute inset-0 w-full h-full">
         <img 
