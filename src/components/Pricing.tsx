@@ -164,6 +164,7 @@ const Pricing = () => {
                     <Button 
                       variant={plan.popular ? "hero" : "enterprise"} 
                       className="w-full group"
+                      onClick={() => window.location.href = '/marketplace'}
                     >
                       {plan.cta}
                       <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
@@ -214,6 +215,7 @@ const Pricing = () => {
                     <Button 
                       variant="cta" 
                       className="w-full group"
+                      onClick={() => window.location.href = '/homes'}
                     >
                       {plan.cta}
                       <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
@@ -270,6 +272,7 @@ const Pricing = () => {
                     <Button 
                       variant={plan.popular ? "hero" : "enterprise"} 
                       className="w-full group"
+                      onClick={() => window.location.href = '/business'}
                     >
                       {plan.cta}
                       <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
@@ -323,7 +326,8 @@ const Pricing = () => {
                     
                     <Button 
                       variant="hero" 
-                      className="w-full group"
+                      className="w-full group bg-primary text-primary-foreground hover:bg-primary/90"
+                      onClick={() => window.open('mailto:partnerships@polygontelecom.com?subject=WISP Partnership Inquiry', '_blank')}
                     >
                       {plan.cta}
                       <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
