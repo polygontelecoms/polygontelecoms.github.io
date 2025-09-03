@@ -325,8 +325,7 @@ const Pricing = () => {
                     </ul>
                     
                     <Button 
-                      variant="hero" 
-                      className="w-full group bg-primary text-primary-foreground hover:bg-primary/90"
+                      className="w-full group bg-blue-600 text-white hover:bg-blue-700 font-semibold py-3 px-6 rounded-lg shadow-lg transition-all duration-300"
                       onClick={() => window.open('mailto:partnerships@polygontelecom.com?subject=WISP Partnership Inquiry', '_blank')}
                     >
                       {plan.cta}
