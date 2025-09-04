@@ -1,19 +1,12 @@
-
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Shield, Radio, Wifi } from "lucide-react";
 import { Link } from "react-router-dom";
 import droneFleetImage from "@/assets/drone-fleet.jpg";
-
 const NewHero = () => {
-  return (
-    <section className="relative min-h-screen w-full flex items-center justify-center overflow-hidden bg-background pt-16">
+  return <section className="relative min-h-screen w-full flex items-center justify-center overflow-hidden bg-background pt-16">
       {/* Background Image */}
       <div className="absolute inset-0 w-full h-full">
-        <img 
-          src={droneFleetImage} 
-          alt="Polygon drone fleet providing integrated connectivity and security services" 
-          className="w-full h-full object-cover opacity-30 dark:opacity-20"
-        />
+        <img src={droneFleetImage} alt="Polygon drone fleet providing integrated connectivity and security services" className="w-full h-full object-cover opacity-30 dark:opacity-20" />
         <div className="absolute inset-0 bg-gradient-to-br from-background via-background/95 to-background/90" />
       </div>
       
@@ -30,10 +23,9 @@ const NewHero = () => {
           <h2 className="text-2xl md:text-3xl font-bold mb-4">One Network, Two Services</h2>
           
           {/* Core Value Proposition */}
-          <p className="text-sm sm:text-base md:text-lg lg:text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
-            The same network that connects us is the same network that protects us. 
-            One infrastructure makes connection permanent and protection immediate.
-          </p>
+          <p className="text-sm sm:text-base md:text-lg lg:text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">Drones as Middleware and Telecom Infrastructure for Wireless Internet Service Provider Services
+
+        </p>
           
           {/* Problem Statement */}
           <div className="p-4 bg-card/60 backdrop-blur-sm border border-border rounded-lg max-w-3xl mx-auto">
@@ -76,8 +68,6 @@ const NewHero = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default NewHero;
