@@ -1,6 +1,7 @@
 
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Shield, Radio, Wifi } from "lucide-react";
+import { Link } from "react-router-dom";
 import droneFleetImage from "@/assets/drone-fleet.jpg";
 
 const NewHero = () => {
@@ -56,13 +57,17 @@ const NewHero = () => {
           
           {/* CTAs */}
           <div className="flex flex-col gap-3 px-4">
-            <Button size="lg" className="w-full text-sm px-6 py-3 bg-primary hover:bg-primary/90">
-              Explore Security Solutions
-              <Shield className="ml-2 h-4 w-4" />
+            <Button size="lg" className="w-full text-sm px-6 py-3 bg-primary hover:bg-primary/90" asChild>
+              <Link to="/security">
+                Explore Security Solutions
+                <Shield className="ml-2 h-4 w-4" />
+              </Link>
             </Button>
-            <Button size="lg" variant="outline" className="w-full text-sm px-6 py-3">
-              Browse Data Plans
-              <Radio className="ml-2 h-4 w-4" />
+            <Button size="lg" variant="outline" className="w-full text-sm px-6 py-3" asChild>
+              <Link to="/marketplace">
+                Browse Data Plans
+                <Radio className="ml-2 h-4 w-4" />
+              </Link>
             </Button>
           </div>
           

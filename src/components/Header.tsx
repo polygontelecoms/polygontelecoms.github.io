@@ -19,19 +19,19 @@ const Header = () => {
         </div>
         
         {/* Navigation */}
-        <nav className="hidden md:flex items-center space-x-8">
+        <nav className="hidden md:flex items-center space-x-6">
           <Link to="/marketplace" className="text-muted-foreground hover:text-primary transition-colors">
             Marketplace
           </Link>
-          <Link to="/homes" className="text-muted-foreground hover:text-primary transition-colors">
-            Homes
+          <Link to="/security" className="text-muted-foreground hover:text-primary transition-colors flex items-center space-x-1">
+            <Shield className="w-4 h-4" />
+            <span>Polygon Security</span>
           </Link>
-          <Link to="/business" className="text-muted-foreground hover:text-primary transition-colors">
-            Business
-          </Link>
-          <Link to="/pricing" className="text-muted-foreground hover:text-primary transition-colors">
-            Pricing
-          </Link>
+          <Button asChild variant="cta" size="sm">
+            <Link to="/request-drone" className="flex items-center space-x-1">
+              <span>Request A Drone</span>
+            </Link>
+          </Button>
         </nav>
         
         {/* CTA Buttons */}

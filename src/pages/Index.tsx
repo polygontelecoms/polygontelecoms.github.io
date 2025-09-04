@@ -1,8 +1,8 @@
 import Header from "@/components/Header";
 import NewHero from "@/components/NewHero";
+import OldVsNewWay from "@/components/OldVsNewWay";
 import IntegratedSystems from "@/components/IntegratedSystems";
 import ServicesOverview from "@/components/ServicesOverview";
-import Pricing from "@/components/Pricing";
 import Footer from "@/components/Footer";
 
 const Index = () => {
@@ -11,9 +11,9 @@ const Index = () => {
       <Header />
       <main>
         <NewHero />
+        <OldVsNewWay />
         <IntegratedSystems />
         <ServicesOverview />
-        <Pricing />
       </main>
       <Footer />
     </div>
