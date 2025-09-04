@@ -24,13 +24,13 @@ const OldVsNewWay = () => {
                 className="w-full h-auto rounded-lg shadow-lg"
               />
               <div className="absolute top-4 left-4 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-bold">
-                OLD WAY!!!
+                OLD WAY
               </div>
             </div>
             <h3 className="text-xl font-bold mb-2 text-red-600">Traditional Infrastructure</h3>
             <p className="text-muted-foreground text-sm">
               Fixed towers, limited coverage, expensive infrastructure, 
-              reactive security that arrives after damage is done.
+              security response that happens after incidents occur.
             </p>
           </div>
           
@@ -43,12 +43,12 @@ const OldVsNewWay = () => {
                 className="w-full h-auto rounded-lg shadow-lg"
               />
               <div className="absolute top-4 left-4 bg-green-500 text-white px-3 py-1 rounded-full text-sm font-bold">
-                New Way!
+                NEW WAY
               </div>
             </div>
             <h3 className="text-xl font-bold mb-2 text-green-600">Polygon Innovation</h3>
             <p className="text-muted-foreground text-sm">
-              Autonomous drones, universal coverage, proactive security, 
+              Autonomous drones, universal coverage, immediate security, 
               one network serving both connectivity and protection.
             </p>
           </div>

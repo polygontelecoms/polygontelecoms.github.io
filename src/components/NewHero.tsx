@@ -32,41 +32,29 @@ const NewHero = () => {
           {/* Core Value Proposition */}
           <p className="text-sm sm:text-base md:text-lg lg:text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
             The same network that connects us is the same network that protects us. 
-            One integrated infrastructure makes connection permanent and protection proactive.
+            One infrastructure makes connection permanent and protection immediate.
           </p>
           
           {/* Problem Statement */}
           <div className="p-4 bg-card/60 backdrop-blur-sm border border-border rounded-lg max-w-3xl mx-auto">
             <p className="text-xs sm:text-sm md:text-base text-foreground">
-              Today, internet access is fragmented and unreliable. Security is reactive and arrives after damage is already done. 
-              <span className="text-primary font-semibold"> Both problems are solved with one system.</span>
+              Current internet access is limited by location. Security response happens after incidents occur. 
+              <span className="text-primary font-semibold"> Both challenges require one solution.</span>
             </p>
           </div>
           
-          {/* Dual Service Pills */}
-          <div className="flex flex-col gap-3 px-4">
-            <div className="flex items-center justify-center space-x-2 bg-card/60 backdrop-blur-sm border border-border rounded-full px-4 py-2">
-              <Wifi className="h-4 w-4 text-primary flex-shrink-0" />
-              <span className="text-sm font-medium">Polygon Telecoms</span>
-            </div>
-            <div className="flex items-center justify-center space-x-2 bg-card/60 backdrop-blur-sm border border-border rounded-full px-4 py-2">
-              <Shield className="h-4 w-4 text-network-signal flex-shrink-0" />
-              <span className="text-sm font-medium">Polygon Security</span>
-            </div>
-          </div>
-          
-          {/* CTAs */}
-          <div className="flex flex-col gap-3 px-4">
-            <Button size="lg" className="w-full text-sm px-6 py-3 bg-primary hover:bg-primary/90" asChild>
-              <Link to="/security">
-                Explore Security Solutions
-                <Shield className="ml-2 h-4 w-4" />
+          {/* CTAs - Side by Side */}
+          <div className="flex gap-3 px-4 max-w-2xl mx-auto">
+            <Button size="lg" className="flex-1 text-sm px-4 py-3 bg-primary hover:bg-primary/90" asChild>
+              <Link to="/marketplace">
+                <Wifi className="mr-2 h-4 w-4" />
+                Polygon Telecoms
               </Link>
             </Button>
-            <Button size="lg" variant="outline" className="w-full text-sm px-6 py-3" asChild>
-              <Link to="/marketplace">
-                Browse Data Plans
-                <Radio className="ml-2 h-4 w-4" />
+            <Button size="lg" variant="outline" className="flex-1 text-sm px-4 py-3" asChild>
+              <Link to="/security">
+                <Shield className="mr-2 h-4 w-4" />
+                Polygon Security
               </Link>
             </Button>
           </div>
