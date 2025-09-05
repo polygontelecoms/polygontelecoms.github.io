@@ -4,7 +4,6 @@ import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuSepara
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import ThemeToggle from "./ThemeToggle";
 import { Link } from "react-router-dom";
-import logo from "@/assets/logo.png";
 
 const Header = () => {
   return (
@@ -12,7 +11,7 @@ const Header = () => {
       <div className="container mx-auto px-6 h-16 flex items-center justify-between">
         <div className="flex items-center space-x-2">
           <Link to="/" className="flex items-center space-x-2">
-            <img src={logo} alt="Polygon Telecoms Logo" className="w-8 h-8" />
+            <img src="/lovable-uploads/72a53ba1-3dcb-4135-9677-8259b7f8c98e.png" alt="Polygon Telecoms Logo" className="w-8 h-8" />
             <span className="font-bold text-xl">Polygon Telecoms</span>
           </Link>
         </div>
