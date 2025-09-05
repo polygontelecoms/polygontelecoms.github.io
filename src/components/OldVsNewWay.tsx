@@ -1,5 +1,7 @@
-import oldWayImage from "@/assets/old-way-towers.png";
-import newWayImage from "@/assets/new-way-drone.png";
+const oldWayImage = "/lovable-uploads/1a3ccfca-be85-435e-97c7-e5ffc147c33b.png";
+const newWayImage = "/lovable-uploads/9dbe75ac-1703-41ea-97a0-45600270c423.png";
+const sentryGunImage = "/lovable-uploads/1a3ccfca-be85-435e-97c7-e5ffc147c33b.png";
+const droneSwarmImage = "/lovable-uploads/9dbe75ac-1703-41ea-97a0-45600270c423.png";
 
 const OldVsNewWay = () => {
   return (
@@ -51,6 +53,27 @@ const OldVsNewWay = () => {
               Autonomous drones, universal coverage, immediate security, 
               one network serving both connectivity and protection.
             </p>
+          </div>
+        </div>
+        
+        {/* Additional Technical Details */}
+        <div className="grid md:grid-cols-2 gap-8 items-center max-w-6xl mx-auto mt-12">
+          {/* Sentry Gun Details */}
+          <div className="text-center">
+            <img 
+              src={sentryGunImage} 
+              alt="Traditional solar powered industrial transmitter infrastructure"
+              className="w-full h-auto rounded-lg shadow-lg"
+            />
+          </div>
+          
+          {/* Drone Swarm Details */}
+          <div className="text-center">
+            <img 
+              src={droneSwarmImage} 
+              alt="Advanced drone swarm with sentry turret and optional dongle technology"
+              className="w-full h-auto rounded-lg shadow-lg"
+            />
           </div>
         </div>
       </div>
