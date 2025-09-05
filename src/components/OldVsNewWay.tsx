@@ -76,6 +76,25 @@ const OldVsNewWay = () => {
             />
           </div>
         </div>
+        
+        {/* Additional Comparison Images */}
+        <div className="grid md:grid-cols-2 gap-8 items-center max-w-6xl mx-auto mt-12">
+          <div className="text-center">
+            <img 
+              src="/lovable-uploads/attached-image-1.png" 
+              alt="Additional infrastructure comparison image"
+              className="w-full h-auto rounded-lg shadow-lg"
+            />
+          </div>
+          
+          <div className="text-center">
+            <img 
+              src="/lovable-uploads/attached-image-2.png" 
+              alt="Additional infrastructure comparison image"
+              className="w-full h-auto rounded-lg shadow-lg"
+            />
+          </div>
+        </div>
       </div>
     </section>
   );
