@@ -30,8 +30,7 @@ const NewHero = () => {
           {/* Problem Statement */}
           <div className="p-4 bg-card/60 backdrop-blur-sm border border-border rounded-lg max-w-3xl mx-auto">
             <p className="text-xs sm:text-sm md:text-base text-foreground">
-              Summon drones for instant internet access + armed security response from the air.
-              <span className="text-primary font-semibold"> Both challenges require one solution.</span>
+              Summon our drones for instant <span className="text-primary">internet access</span> and armed <span className="text-primary">security response</span> from the air.
             </p>
           </div>
           
