@@ -12,6 +12,15 @@ const NewHero = () => {
       
       <div className="relative z-10 container mx-auto px-4 text-center w-full max-w-7xl py-8">
         <div className="max-w-5xl mx-auto space-y-6">
+          {/* Logo */}
+          <div className="flex justify-center mb-6">
+            <img 
+              src="/lovable-uploads/72a53ba1-3dcb-4135-9677-8259b7f8c98e.png" 
+              alt="Polygon Platform Logo" 
+              className="h-16 w-auto"
+            />
+          </div>
+          
           {/* Main Headline */}
           <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight">
             <span className="text-primary">Secure the World.</span>
