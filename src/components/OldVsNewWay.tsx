@@ -81,16 +81,16 @@ const OldVsNewWay = () => {
         <div className="grid md:grid-cols-2 gap-8 items-center max-w-6xl mx-auto mt-12">
           <div className="text-center">
             <img 
-              src="/lovable-uploads/attached-image-1.png" 
-              alt="Additional infrastructure comparison image"
+              src="/lovable-uploads/1a3ccfca-be85-435e-97c7-e5ffc147c33b.png" 
+              alt="Dynamic infrastructure visualization"
               className="w-full h-auto rounded-lg shadow-lg"
             />
           </div>
           
           <div className="text-center">
             <img 
-              src="/lovable-uploads/attached-image-2.png" 
-              alt="Additional infrastructure comparison image"
+              src="/lovable-uploads/9dbe75ac-1703-41ea-97a0-45600270c423.png" 
+              alt="Dynamic drone network visualization"
               className="w-full h-auto rounded-lg shadow-lg"
             />
           </div>
