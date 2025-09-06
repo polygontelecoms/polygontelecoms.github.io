@@ -10,6 +10,7 @@ import NetworkVisualizerPage from "./pages/NetworkVisualizerPage";
 import Marketplace from "./pages/Marketplace";
 import Security from "./pages/Security";
 import DroneRequest from "./pages/DroneRequest";
+import DroneDelivery from "./pages/DroneDelivery";
 
 const queryClient = new QueryClient();
 
@@ -25,6 +26,7 @@ const App = () => (
             <Route path="/marketplace" element={<Marketplace />} />
             <Route path="/security" element={<Security />} />
             <Route path="/request-drone" element={<DroneRequest />} />
+            <Route path="/drone-delivery" element={<DroneDelivery />} />
             <Route path="/network" element={<NetworkVisualizerPage />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />

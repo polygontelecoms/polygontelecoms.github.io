@@ -35,7 +35,7 @@ const Footer = () => {
               <li><a href="#telecoms" className="hover:text-foreground transition-colors">Telecoms Marketplace</a></li>
               <li><a href="#security" className="hover:text-foreground transition-colors">Security Systems</a></li>
               <li><a href="#coverage" className="hover:text-foreground transition-colors">Coverage Map</a></li>
-              <li><a href="#api" className="hover:text-foreground transition-colors">Developer API</a></li>
+              <li><a href="#support" className="hover:text-foreground transition-colors">Support Center</a></li>
             </ul>
           </div>
           

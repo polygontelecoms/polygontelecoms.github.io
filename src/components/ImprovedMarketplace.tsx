@@ -121,8 +121,8 @@ const ImprovedMarketplace = () => {
   });
 
   const handlePurchase = (bundle: WispBundle) => {
-    // Simulate purchase
-    alert(`Purchasing ${bundle.name} from ${bundle.provider} for $${bundle.price}`);
+    // Navigate to drone tracking for data bundle delivery
+    window.location.href = `/drone-delivery?bundle=${encodeURIComponent(bundle.name)}&provider=${encodeURIComponent(bundle.provider)}&price=${bundle.price}&location=${encodeURIComponent(location)}`;
   };
 
   return (
