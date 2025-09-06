@@ -25,7 +25,7 @@ const OldVsNewWay = () => {
                 alt="Old Way: Fixed ground-based telecom towers and infrastructure"
                 className="w-full h-auto rounded-lg shadow-lg"
               />
-              <div className="absolute top-4 left-4 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-bold">
+              <div className="absolute top-2 left-2 bg-red-500 text-white px-2 py-0.5 rounded-full text-xs font-bold">
                 OLD WAY
               </div>
             </div>
@@ -44,7 +44,7 @@ const OldVsNewWay = () => {
                 alt="New Way: Autonomous drone network with sentry turrets and mobile connectivity"
                 className="w-full h-auto rounded-lg shadow-lg"
               />
-              <div className="absolute top-4 left-4 bg-green-500 text-white px-3 py-1 rounded-full text-sm font-bold">
+              <div className="absolute top-2 left-2 bg-green-500 text-white px-2 py-0.5 rounded-full text-xs font-bold">
                 NEW WAY
               </div>
             </div>
