@@ -15,9 +15,9 @@ const NewHero = () => {
           {/* Logo */}
           <div className="flex justify-center mb-6">
             <img 
-              src="/lovable-uploads/72a53ba1-3dcb-4135-9677-8259b7f8c98e.png" 
+              src="/lovable-uploads/b1a54142-b530-433d-b772-95a691469d22.png" 
               alt="Polygon Platform Logo" 
-              className="h-16 w-auto"
+              className="h-24 w-auto"
             />
           </div>
           
