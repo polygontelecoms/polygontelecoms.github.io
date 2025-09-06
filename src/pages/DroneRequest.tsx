@@ -91,7 +91,7 @@ const DroneRequest = () => {
               {/* Service Selection */}
               <div className="space-y-6">
                 <div>
-                  <h2 className="text-xl font-semibold mb-4">Select Service</h2>
+                  <h2 className="text-xl font-semibold mb-4">Personal Drone Companion</h2>
                   <div className="space-y-3">
                     {services.map((service) => (
                       <Card 
