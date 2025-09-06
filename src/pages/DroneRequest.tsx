@@ -34,7 +34,7 @@ const DroneRequest = () => {
     },
     {
       id: "security",
-      name: "Security Escort",
+      name: "Security Detail",
       icon: <Shield className="w-6 h-6" />,
       description: "Personal protection and monitoring",
       basePrice: 45,
@@ -42,24 +42,9 @@ const DroneRequest = () => {
       color: "text-red-500",
       bgColor: "bg-red-500/10",
       options: [
-        { name: "Basic Escort", price: 0 },
+        { name: "Basic Protection", price: 0 },
         { name: "Enhanced Monitoring", price: 15 },
         { name: "Emergency Response", price: 30 }
-      ]
-    },
-    {
-      id: "charging",
-      name: "Device Charging",
-      icon: <Battery className="w-6 h-6" />,
-      description: "Wireless power delivery to your devices",
-      basePrice: 25,
-      unit: "per hour",
-      color: "text-green-500", 
-      bgColor: "bg-green-500/10",
-      options: [
-        { name: "Phone Charging", price: 0 },
-        { name: "Laptop Charging", price: 10 },
-        { name: "Multiple Devices", price: 20 }
       ]
     }
   ];
