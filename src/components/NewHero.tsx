@@ -17,7 +17,7 @@ const NewHero = () => {
             <img 
               src="/lovable-uploads/b1a54142-b530-433d-b772-95a691469d22.png" 
               alt="Polygon Platform Logo" 
-              className="h-24 w-auto"
+              className="h-36 w-auto"
             />
           </div>
           
