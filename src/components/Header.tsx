@@ -22,15 +22,15 @@ const Header = () => {
         
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-6">
-          <Link to="/security" className="text-muted-foreground hover:text-primary transition-colors flex items-center space-x-1">
-            <Shield className="w-4 h-4" />
-            <span>Subscriptions</span>
-          </Link>
           <Button asChild variant="cta" size="sm">
             <Link to="/request-drone" className="flex items-center space-x-1">
               <span>Request A Drone</span>
             </Link>
           </Button>
+          <Link to="/security" className="text-muted-foreground hover:text-primary transition-colors flex items-center space-x-1">
+            <Shield className="w-4 h-4" />
+            <span>Subscriptions</span>
+          </Link>
         </nav>
         
         {/* Desktop CTA Buttons */}
