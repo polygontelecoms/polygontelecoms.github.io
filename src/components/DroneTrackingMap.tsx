@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Clock, Navigation, MapPin, Zap, Shield } from 'lucide-react';
+import { Clock, Navigation, MapPin, Gauge, Shield, Video, Signal } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 
@@ -12,11 +12,12 @@ interface DroneTrackingMapProps {
 const DroneTrackingMap = ({ eta, userLocation, serviceName }: DroneTrackingMapProps) => {
   const [timeRemaining, setTimeRemaining] = useState(eta * 60); // Convert to seconds
   const [dronePosition, setDronePosition] = useState({ x: 10, y: 10 }); // Starting position
-  const [droneId] = useState(`PG${Math.floor(Math.random() * 9000) + 1000}`);
+  const [droneId] = useState(`#${Math.floor(Math.random() * 900) + 100}`); // Random 3-digit number
   const [currentSpeed, setCurrentSpeed] = useState(0);
   const [batteryLevel, setBatteryLevel] = useState(85 + Math.floor(Math.random() * 15));
   const [statusMessage, setStatusMessage] = useState("Drone dispatched and en route");
   const [altitude, setAltitude] = useState(120 + Math.floor(Math.random() * 80));
+  const [signalStrength] = useState(85 + Math.floor(Math.random() * 15));
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -27,37 +28,47 @@ const DroneTrackingMap = ({ eta, userLocation, serviceName }: DroneTrackingMapPr
   }, []);
 
   useEffect(() => {
-    // Realistic drone movement simulation
+    // Realistic drone movement simulation synced with countdown
     const moveInterval = setInterval(() => {
       setDronePosition(prev => {
         const deltaX = 50 - prev.x;
         const deltaY = 50 - prev.y;
         const distance = Math.sqrt(deltaX * deltaX + deltaY * deltaY);
         
-        if (distance < 2) {
+        if (distance < 2 || timeRemaining <= 0) {
           setCurrentSpeed(0);
-          setStatusMessage("Arriving at destination");
+          setStatusMessage("Service delivery complete");
           return prev;
         }
         
-        // Variable speed based on distance and obstacles
-        const baseSpeed = 1.2 + Math.random() * 0.8;
-        const speedVariation = 0.8 + Math.random() * 0.4;
-        const actualSpeed = baseSpeed * speedVariation;
-        setCurrentSpeed(Math.round(actualSpeed * 25)); // Convert to km/h for display
+        // Speed synchronized with remaining time for realistic arrival
+        const totalDistance = Math.sqrt(Math.pow(50 - 10, 2) + Math.pow(50 - 10, 2));
+        const progressNeeded = (totalDistance - distance) / totalDistance;
+        const timeProgress = 1 - (timeRemaining / (eta * 60));
         
-        // Slightly curved path (not perfectly straight)
-        const noise = (Math.random() - 0.5) * 0.3;
+        // Adjust speed based on how close we should be vs actual position
+        let speedMultiplier = 1.0;
+        if (timeProgress > progressNeeded) speedMultiplier = 1.4; // Speed up if behind
+        if (timeProgress < progressNeeded) speedMultiplier = 0.7; // Slow down if ahead
+        
+        const baseSpeed = (1.2 + Math.random() * 0.6) * speedMultiplier;
+        const speedVariation = 0.85 + Math.random() * 0.3;
+        const actualSpeed = baseSpeed * speedVariation;
+        setCurrentSpeed(Math.round(actualSpeed * 28 + Math.random() * 8)); // 20-40 km/h range
+        
+        // Slightly curved path with wind effect
+        const noise = (Math.random() - 0.5) * 0.25;
+        const windEffect = Math.sin(Date.now() / 10000) * 0.1;
         
         return {
-          x: prev.x + (deltaX / distance) * actualSpeed + noise,
+          x: prev.x + (deltaX / distance) * actualSpeed + noise + windEffect,
           y: prev.y + (deltaY / distance) * actualSpeed + noise
         };
       });
-    }, 1500 + Math.random() * 1000); // Variable update intervals
+    }, 1200 + Math.random() * 800); // Variable but more frequent updates
 
     return () => clearInterval(moveInterval);
-  }, []);
+  }, [timeRemaining, eta]);
 
   useEffect(() => {
     // Status updates based on time remaining
@@ -109,7 +120,7 @@ const DroneTrackingMap = ({ eta, userLocation, serviceName }: DroneTrackingMapPr
               <span className="text-muted-foreground">To: {userLocation}</span>
             </div>
             <div className="flex items-center space-x-2 text-sm">
-              <Zap className="w-4 h-4 text-green-500" />
+              <Gauge className="w-4 h-4 text-green-500" />
               <span>Speed: {currentSpeed} km/h</span>
             </div>
             <div className="text-sm">
@@ -119,6 +130,10 @@ const DroneTrackingMap = ({ eta, userLocation, serviceName }: DroneTrackingMapPr
               <Shield className="w-4 h-4 text-blue-500" />
               <span>Battery: {batteryLevel}%</span>
             </div>
+            <div className="flex items-center space-x-2 text-sm">
+              <Signal className="w-4 h-4 text-green-500" />
+              <span>Signal: {signalStrength}%</span>
+            </div>
           </div>
           <div className="text-sm text-primary font-medium">
             {statusMessage}
@@ -126,10 +141,73 @@ const DroneTrackingMap = ({ eta, userLocation, serviceName }: DroneTrackingMapPr
         </CardContent>
       </Card>
 
+      {/* Live Camera Feed */}
+      <Card>
+        <CardHeader className="pb-3">
+          <CardTitle className="flex items-center space-x-2">
+            <Video className="w-5 h-5 text-primary" />
+            <span>Live Camera Feed - Drone {droneId}</span>
+          </CardTitle>
+        </CardHeader>
+        <CardContent>
+          <div className="relative bg-gradient-to-br from-slate-900 to-slate-700 rounded-lg h-48 border overflow-hidden">
+            {/* Simulated camera view with moving landscape */}
+            <div className="absolute inset-0 bg-gradient-to-b from-sky-400 via-sky-200 to-green-300">
+              {/* Clouds moving */}
+              <div className="absolute top-2 left-0 w-full h-12 opacity-60">
+                <div className="animate-pulse bg-white/40 rounded-full w-16 h-8 absolute top-2 left-1/4"></div>
+                <div className="animate-pulse bg-white/30 rounded-full w-12 h-6 absolute top-4 left-1/2 animation-delay-1000"></div>
+                <div className="animate-pulse bg-white/50 rounded-full w-20 h-10 absolute top-1 right-1/4 animation-delay-2000"></div>
+              </div>
+              
+              {/* Ground features */}
+              <div className="absolute bottom-0 w-full h-32">
+                <div className="absolute bottom-0 left-0 w-full h-16 bg-green-600/60"></div>
+                <div className="absolute bottom-4 left-1/4 w-8 h-8 bg-green-800/70 rounded-full"></div>
+                <div className="absolute bottom-6 right-1/3 w-6 h-6 bg-green-800/70 rounded-full"></div>
+                <div className="absolute bottom-8 left-1/2 w-4 h-12 bg-amber-800/60"></div>
+              </div>
+              
+              {/* Building silhouettes */}
+              <div className="absolute bottom-16 left-0 w-full h-16 opacity-50">
+                <div className="bg-gray-600 w-12 h-12 absolute bottom-0 left-1/6"></div>
+                <div className="bg-gray-700 w-8 h-16 absolute bottom-0 left-1/3"></div>
+                <div className="bg-gray-600 w-16 h-8 absolute bottom-0 right-1/4"></div>
+              </div>
+            </div>
+            
+            {/* Camera UI overlay */}
+            <div className="absolute inset-0 pointer-events-none">
+              <div className="absolute top-2 left-2 bg-black/60 text-white px-2 py-1 rounded text-xs">
+                REC ● LIVE
+              </div>
+              <div className="absolute top-2 right-2 bg-black/60 text-white px-2 py-1 rounded text-xs">
+                ALT: {altitude}m
+              </div>
+              <div className="absolute bottom-2 left-2 bg-black/60 text-white px-2 py-1 rounded text-xs">
+                GPS: {dronePosition.x.toFixed(1)}, {dronePosition.y.toFixed(1)}
+              </div>
+              <div className="absolute bottom-2 right-2 bg-black/60 text-white px-2 py-1 rounded text-xs">
+                {formatTime(timeRemaining)}
+              </div>
+              
+              {/* Crosshair */}
+              <div className="absolute inset-0 flex items-center justify-center">
+                <div className="w-8 h-8 border border-white/50">
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="w-2 h-2 bg-red-500 rounded-full opacity-60 animate-pulse"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </CardContent>
+      </Card>
+
       {/* Interactive Map */}
       <Card>
         <CardHeader className="pb-3">
-          <CardTitle>Live Tracking</CardTitle>
+          <CardTitle>Live GPS Tracking</CardTitle>
         </CardHeader>
         <CardContent>
           <div className="relative bg-gradient-to-br from-blue-50 to-green-50 dark:from-blue-950 dark:to-green-950 rounded-lg h-80 border">
