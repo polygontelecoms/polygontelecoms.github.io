@@ -7,7 +7,7 @@ import { ThemeProvider } from "next-themes";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import NetworkVisualizerPage from "./pages/NetworkVisualizerPage";
-import Marketplace from "./pages/Marketplace";
+
 import Security from "./pages/Security";
 import DroneRequest from "./pages/DroneRequest";
 import DroneDelivery from "./pages/DroneDelivery";
@@ -23,7 +23,7 @@ const App = () => (
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Index />} />
-            <Route path="/marketplace" element={<Marketplace />} />
+            
             <Route path="/security" element={<Security />} />
             <Route path="/request-drone" element={<DroneRequest />} />
             <Route path="/drone-delivery" element={<DroneDelivery />} />

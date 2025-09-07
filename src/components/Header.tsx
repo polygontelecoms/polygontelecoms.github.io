@@ -22,12 +22,9 @@ const Header = () => {
         
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-6">
-          <Link to="/marketplace" className="text-muted-foreground hover:text-primary transition-colors">
-            Marketplace
-          </Link>
           <Link to="/security" className="text-muted-foreground hover:text-primary transition-colors flex items-center space-x-1">
             <Shield className="w-4 h-4" />
-            <span>Polygon Security</span>
+            <span>Subscriptions</span>
           </Link>
           <Button asChild variant="cta" size="sm">
             <Link to="/request-drone" className="flex items-center space-x-1">
@@ -89,19 +86,12 @@ const Header = () => {
             <SheetContent side="right" className="w-80">
               <div className="flex flex-col space-y-4 mt-6">
                 <Link 
-                  to="/marketplace" 
-                  className="text-lg font-medium hover:text-primary transition-colors"
-                  onClick={() => setIsOpen(false)}
-                >
-                  Marketplace
-                </Link>
-                <Link 
                   to="/security" 
                   className="text-lg font-medium hover:text-primary transition-colors flex items-center space-x-2"
                   onClick={() => setIsOpen(false)}
                 >
                   <Shield className="w-5 h-5" />
-                  <span>Polygon Security</span>
+                  <span>Subscriptions</span>
                 </Link>
                 <Link 
                   to="/network" 
